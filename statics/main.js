@@ -8,7 +8,7 @@ const navBar = document.querySelector("nav"); // Seclect the navbar
 
 // Contact me form
 const userEmail = document.querySelector("#email");
-const userName = document.querySelector("#name")
+const userName = document.querySelector("#name");
 const btnGo = document.querySelector("#btnGo");
 const form = document.querySelector("#contactForm");
 
@@ -51,14 +51,15 @@ form.addEventListener("submit", (e) => {
     mail: email
   };
 
-  const contacturl = `https://api.crazydeveloper.fail/webactions/contactMeAction`;
+  const contacturl = "https://reach.services.crazydeveloper.fail/webactions/rme_cb_act_email";
   const contactoptions = {
-    method: `POST`,
+    method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json"  
     },
     body: JSON.stringify(dataPrepared)
-  }
+  };
+
   fetch(contacturl, contactoptions)
     .then(
       ((result) => {
@@ -71,7 +72,7 @@ form.addEventListener("submit", (e) => {
       (err) => {
         console.log(err);
         btnGo.disabled = false;
-        btnGo.classList.add("SENDERR")
+        btnGo.classList.add("SENDERR");
         btnGo.innerHTML = "<strong>Couldn't Send. Try again?</strong>";
       }
     );
