@@ -55,7 +55,7 @@ form.addEventListener("submit", (e) => {
   const contactoptions = {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"  
+      "Content-Type": "application/json"
     },
     body: JSON.stringify(dataPrepared)
   };
