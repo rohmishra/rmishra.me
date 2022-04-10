@@ -4,7 +4,8 @@
   "description": "Personal showcase website for Rohan Mishra. (c) 2022 Rohan Mishra.",
   "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "author": "Rohan M.",
   "license": "ISC",
