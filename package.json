@@ -1,7 +1,7 @@
 {
   "name": "website_mini",
   "version": "1.1.0",
-  "description": "Personal showcase website for Rohan Mishra. (c) 2020 Rohan Mishra.",
+  "description": "Personal showcase website for Rohan Mishra. (c) 2022 Rohan Mishra.",
   "main": "main.js",
   "scripts": {
     "test": "jest"
@@ -10,13 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "branch-naming-check": "^1.0.2",
-    "husky": "^4.2.3",
-    "jest": "^25.1.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "branch-naming-check '^(BUGFIX|FEATURE|LEGAL|DEV)-\\d{1,8}'"
-    }
+    "husky": "^7.0.4",
+    "jest": "^27.5.1"
   }
 }
