@@ -38,26 +38,28 @@ nav.heroSpecial a {
     animation-direction: alternate
 }
 
-/* Medium Strip CTA */
-#medium-CTA>p {
+/* linkedin Strip CTA */
+
+@media (prefers-color-scheme: dark){
+    #linkedin-CTA {
+        background-color: #bbb;
+    }
+}
+
+#linkedin-CTA>p {
     color: #222;
 }
 
-#medium-CTA>p>a {
+#linkedin-CTA>p>a {
     color: #000;
     border-bottom: 2px #000 solid;
 }
 
-#medium-CTA a:hover,
-#medium-CTA a:focus {
-    background-color: #000;
+#linkedin-CTA a:hover,
+#linkedin-CTA a:focus {
+    background-color: #0A66C2;
     color: #fff;
-}
-
-@media(prefers-scheme-scheme: dark){
-    #medium-CTA {
-        background-color: #bdbdbd;
-    }
+    border-bottom: 2px #0A66C2 solid;
 }
 
 /* Who am I */
@@ -101,7 +103,7 @@ nav.heroSpecial a {
 
 img#avatar {
     clip-path: circle(40%);
-    -webkit-clip-path: circle(40%);
+    min-height: 300px;
     max-height: 400px;
     max-width: 400px;
     margin-left: 20px;
@@ -251,7 +253,6 @@ img#avatar {
     }
 
     .container#projects {
-        min-height: 80vh;
         padding: 0px 50px;
     }
 
@@ -261,7 +262,7 @@ img#avatar {
         font-size: 1.75em;
         padding: 36px 24px;
     }
-
+    
     .container#projects .card:hover,
     .container#projects .card:focus {
         transform: scale(1.06);
@@ -279,6 +280,8 @@ img#avatar {
     .container#hero {
         justify-content: center;
         align-items: center;
+        animation: none;
+        min-height: 85vh;
     }
 
     .container#hero>.bubbles {
