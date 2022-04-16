@@ -51,7 +51,7 @@ form.addEventListener("submit", (e) => {
     mail: email
   };
 
-  const contacturl = "https://reach.services.crazydeveloper.fail/webactions/rme_cb_act_email";
+  const contacturl = "https://api.crazydeveloper.fail/webactions/rme_cb_act_email";
   const contactoptions = {
     method: "POST",
     headers: {
