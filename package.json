@@ -1,20 +1,21 @@
 {
-  "name": "website_mini",
-  "version": "1.1.0",
-  "description": "Personal showcase website for Rohan Mishra. (c) 2022 Rohan Mishra.",
-  "main": "main.js",
+  "name": "rohans-website",
+  "version": "1.1.1",
+  "description": "Personal website for Rohan Mishra. (c) 2022 Rohan Mishra.",
+  "main": "index.html",
   "scripts": {
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "nodemon": "nodemon ."
   },
   "author": "Rohan M.",
   "license": "ISC",
   "dependencies": {
     "branch-naming-check": "^1.0.2",
     "eslint-plugin-jest": "^26.1.4",
-    "jest": "^27.5.1"
+    "jest": "^29.0.3"
   },
   "devDependencies": {
-    "husky": "^7.0.4"
+    "husky": "^8.0.1"
   }
 }
