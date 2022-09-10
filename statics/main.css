@@ -68,7 +68,7 @@ nav {
     transition: all 300ms ease-in-out;
 }
 
-@supports (-webkit-backdrop-filter: blur(30px) ){
+@supports (-webkit-backdrop-filter: blur(30px)) {
     nav {
         background: rgba(255, 255, 255, 0.75);
     }
@@ -270,8 +270,8 @@ footer a:hover {
     justify-content: flex-end;
 }
 
-@media(prefers-color-scheme: light){
-    nav:not(.heroSpecial)>img{
+@media(prefers-color-scheme: light) {
+    nav:not(.heroSpecial)>img {
         transition: all 300ms ease-in;
         filter: brightness(50%);
     }
@@ -279,49 +279,25 @@ footer a:hover {
 
 /* Dark Mode */
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark) {
     nav {
-        background: rgba(40, 40, 40, 0.85);
-    }
-    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
-        nav{
-
-            background: rgba(110, 110, 110, 0.47);
-            box-shadow: 0px 1px 6px rgba(20, 20, 20, 0.5);
-        }
+        background: rgba(80, 80, 80, 0.75);
+        /* background: rgba(55, 55, 55, 0.45); */
+        box-shadow: 0px 1px 6px rgba(20, 20, 20, 0.5);
+        backdrop-filter: blur(20px);
     }
 
-    @supports (--webkit-backdrop-filter: blur(16px)) {
-        nav {
-            backdrop-filter: blur(20px);
-            background: rgba(55, 55, 55, 0.45);
-        }
+    nav:hover {
+        background: rgb(35, 35, 35, 0.8);
     }
 
-    /*  
-    Firefox supports backdrop filter blur but doesnt enable it. 
-    This results in a broken experience with the navbar.
-    This will force navbar to use different colors on firefox but 
-    will break for everyone who has blur enabled.
-    I will remove this "hack" in future if i find a better way.
-*/
-    @-moz-document url-prefix() {
-        nav {
-            background: rgba(40, 40, 40, 0.75);
-            box-shadow: none;
-            backdrop-filter: none;
-        }
-    }
-
-    nav:hover{
-        background: rgb(35, 35, 35,0.8);
-    }
     nav>ul>li>a {
         color: #ccc;
         font-style: 600;
     }
-    nav>ul>li>a:hover{
-        color:#fff;
+
+    nav>ul>li>a:hover {
+        color: #fff;
 
     }
 }
@@ -367,4 +343,3 @@ footer a:hover {
     }
 
 }
-
