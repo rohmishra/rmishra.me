@@ -10,12 +10,13 @@
 /* 
  0. Navigation Bar
 */
-nav{
+nav {
     background: none;
     box-shadow: unset;
     padding-top: 24px;
 }
-nav:hover{
+
+nav:hover {
     background: unset;
 }
 
@@ -27,14 +28,20 @@ nav:hover{
     /* Default Container is flexing horizontally, make it vertical */
     flex-direction: column;
 }
-.not-found>h2{
+
+.not-found>h2 {
     color: #444;
     font-size: 14em;
     padding-top: 16%;
     line-height: unset;
+
+    background: linear-gradient(70deg, hsla(356, 60%, 53%, 1) 0%, hsla(313, 60%, 33%, 1) 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
-.not-found>h3{
+.not-found>h3 {
     padding-bottom: 20%;
     text-align: center;
 }
@@ -42,21 +49,24 @@ nav:hover{
 /* 
  1.a. Not found for dark mode 
  */
-@media (prefers-color-scheme: dark){
-    footer{
+@media (prefers-color-scheme: dark) {
+    footer {
         background: #212121;
     }
-    
- 
+
+
     .container.not-found {
         background: #212121;
     }
 
-    .not-found>h2{
-        color: #dedede;
+    .not-found>h2 {
+        background: linear-gradient(60deg, hsla(69, 80%, 76%, 1) 0%, hsla(23, 68%, 67%, 1) 24%, hsla(285, 70%, 60%, 1) 59%, hsla(331, 58%, 60%, 1) 100%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
     }
 
-    .not-found>h3{
+    .not-found>h3 {
         color: #bcbcbc;
     }
 }
