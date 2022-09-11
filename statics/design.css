@@ -109,7 +109,7 @@ nav {
 /* Light topbar for design */
 /* Defined as: lightnav */
 
-nav#light>ul>li>a {
+nav.light>ul>li>a {
     color: #444;
 }
 
