@@ -107,16 +107,34 @@ nav {
 }
 
 /* Light topbar for design */
-/* Defined as: lightnav */
+/* Defined as: lightnav, light */
+
+nav>ul>li>a {
+    color: #eee;
+}
+
+nav:hover>ul>li>a,
+nav:focus-within>ul>li>a {
+
+    color: rgba(40, 40, 0, 0.75);
+
+}
 
 nav.light>ul>li>a {
     color: #444;
 }
 
+nav.light>ul>li>a:hover {
+    color: #fff;
+    background-color: #666;
+    border-color: unset;
+
+}
+
 /* SPECIFIC CONTAINER DESIGN */
 
 #heroSpecial {
-    background: linear-gradient(241.25deg, rgba(255, 255, 255, 0.71) 0%, rgba(221, 25, 25, 0.93) 0.01%, rgba(11, 7, 211, 0.63) 100%);
+    background: #3A3A3A;
     justify-content: center;
 }
 
@@ -199,8 +217,6 @@ nav.light>ul>li>a {
     animation-delay: 100ms;
     animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
 }
-
-#ubank>.heroimg>img {}
 
 #all_projects p {
     margin-top: 8px;
