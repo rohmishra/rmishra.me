@@ -9,7 +9,7 @@
     "nodemon": "nodemon ."
   },
   "author": "Rohan M.",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "branch-naming-check": "^1.0.2",
     "eslint-plugin-jest": "^26.1.4",
