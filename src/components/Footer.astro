@@ -1,0 +1,20 @@
+---
+import { socialLinks } from '../data/site';
+---
+<footer class="site-footer">
+  <div>
+    <h2>Rohan Mishra</h2>
+    <p class="footer-role">Developer, platform engineer, and designer</p>
+    <div class="social-links">
+      <p>Follow me:</p>
+      <ul>
+        {socialLinks.map((social) => <li><a href={social.href} rel={social.rel}>{social.label}</a></li>)}
+      </ul>
+    </div>
+  </div>
+  <div class="footer-meta">
+    <a class="footer-email" href="mailto:hi@rmishra.me">Email me</a>
+    <p>Copyright {new Date().getFullYear()}, Rohan Mishra.</p>
+    <p>Support service code is available on <a href="https://github.com/rohmishra/web-support-service">GitHub</a>.</p>
+  </div>
+</footer>

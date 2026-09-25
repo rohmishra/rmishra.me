@@ -1,0 +1,9 @@
+---
+interface Props { title: string; description?: string; links?: { label: string; href: string }[] }
+const { title, description, links = [] } = Astro.props;
+---
+<article class="project-card">
+  <h3>{title}</h3>
+  <p>{description ?? 'Information available on request.'}</p>
+  {links.length > 0 && <p class="project-links">{links.map((link) => <a href={link.href}>{link.label}</a>)}</p>}
+</article>

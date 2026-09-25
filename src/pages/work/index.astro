@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import DesignShowcase from '../../components/DesignShowcase.astro';
+import { projects, designs } from '../../data/site';
+---
+<BaseLayout title="Work by Rohan Mishra" description="Projects, interface designs, platform engineering, system architecture, and open source work by Rohan Mishra.">
+  <Header />
+  <main id="main-content">
+    <section class="page-section design-page-intro work-intro">
+      <h1>Work</h1>
+      <p>Projects, product design, platform engineering, system architecture, and other things I’ve built or helped plan.</p>
+    </section>
+    <section class="page-section work-projects" aria-labelledby="projects-title">
+      <div class="section-heading"><h2 id="projects-title">Projects and engineering</h2><p>Software, platform work, architecture, and open source contributions.</p></div>
+      <div class="project-grid">{projects.map((project) => <ProjectCard {...project} />)}</div>
+    </section>
+    <section class="work-designs" aria-labelledby="designs-title">
+      <div class="section-heading"><h2 id="designs-title">Design explorations</h2><p>Interface concepts, product explorations, and visual systems.</p></div>
+      {designs.map((item) => <DesignShowcase item={item} />)}
+    </section>
+    <section class="page-section more-work"><h2>There’s more to explore</h2><p>Browse photography and additional design work.</p><p><a class="button" href="https://instagram.com/_framedlife">Photos</a> <a class="button" href="https://www.behance.net/rohmish">More designs</a></p></section>
+    <ContactSection />
+  </main>
+  <Footer />
+</BaseLayout>

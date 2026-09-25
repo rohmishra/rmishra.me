@@ -1,0 +1,5 @@
+---
+interface Props { id?: string; children: any; tone?: 'light' | 'dark' }
+const { id, tone = 'light' } = Astro.props;
+---
+<aside id={id} class:list={['callout', `callout--${tone}`]}><p><slot /></p></aside>

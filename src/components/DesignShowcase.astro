@@ -1,0 +1,15 @@
+---
+import type { designs } from '../data/site';
+type Design = (typeof designs)[number];
+const { item } = Astro.props as { item: Design };
+---
+<article class:list={['design-showcase', `design-showcase--${item.theme}`]} id={item.id}>
+  <div class="design-copy">
+    {item.logo ? <img class="design-logo" src={item.logo} alt={`${item.title} logo`} /> : <h2>{item.title}</h2>}
+    <p>{item.description}</p>
+    {item.link && <a class="button" href={item.link}>{item.cta}</a>}
+  </div>
+  <div class="design-image">
+    <img src={item.image} srcset={item.srcset} alt={item.alt} loading="lazy" width="900" height="900" />
+  </div>
+</article>

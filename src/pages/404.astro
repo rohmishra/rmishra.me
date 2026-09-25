@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="Page not found | Rohan Mishra" description="The page you requested could not be found.">
+  <Header />
+  <main id="main-content" class="not-found page-section"><h1>Oops!</h1><p>The page you requested could not be found.</p><p><a class="button" href="/">Return home</a> <a class="button" href="/work/">Browse my work</a></p></main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CalloutStrip from '../components/CalloutStrip.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { projects } from '../data/site';
+---
+<BaseLayout title="Rohan Mishra | Developer, Platform Engineer, and Designer" description="Rohan Mishra is a software developer, platform engineer, system architect, and designer building useful digital products.">
+  <Header overlay />
+  <main id="main-content">
+    <section class="page-section hero" id="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Hello, I’m Rohan.</p>
+        <h1 id="hero-title">Developer, platform engineer, and designer</h1>
+        <p>I build reliable software, clear interfaces, and the systems that help them run well.</p>
+        <a href="#intro">Get to know me <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="/assets/homeell1.svg" alt="" width="300" height="300" />
+        <img src="/assets/homeell2.svg" alt="" width="260" height="260" />
+        <img src="/assets/homeell3.svg" alt="" width="220" height="220" />
+      </div>
+    </section>
+    <CalloutStrip id="linkedin-cta">See what I’m working on at <a href="https://linkedin.com/in/rohmishra">LinkedIn</a>.</CalloutStrip>
+    <section class="page-section split-section" id="intro" aria-labelledby="intro-title">
+      <div>
+        <h2 id="intro-title">Who am I?</h2>
+        <p>I’m a software developer, platform engineer, and designer who cares about the details that make digital products feel effortless. At PockyDoc, I work on platform engineering, system architecture, and planning the foundations that support healthcare technology for the next generation.</p>
+        <p>My work connects product development with infrastructure: shaping an architecture, planning how it evolves, and helping teams deliver it reliably. When I’m away from a code editor, I’m usually exploring music, design, or a new idea.</p>
+      </div>
+      <div>
+        <img class="portrait" src="/assets/me.jpg" alt="Rohan Mishra" width="480" height="480" loading="lazy" />
+      </div>
+    </section>
+    <CalloutStrip id="github-cta" tone="dark">This website is developed in the open on <a href="https://github.com/rohmishra/rmishra.me">GitHub</a>.</CalloutStrip>
+    <section class="page-section projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><h2 id="projects-title">Selected projects</h2><p>Some things I’ve built and helped bring to life.</p></div>
+      <div class="project-grid">{projects.map((project) => <ProjectCard {...project} />)}</div>
+      <p class="section-link"><a class="button" href="/work/">See all my work</a></p>
+    </section>
+    <CalloutStrip id="resume-cta">Looking to hire? <a href="https://files.rmishra.me/resume/Resume-latest.pdf" download="Rohan-Mishra-Resume.pdf">Download my resume</a>.</CalloutStrip>
+    <ContactSection />
+  </main>
+  <Footer />
+</BaseLayout>

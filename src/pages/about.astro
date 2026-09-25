@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="About Rohan Mishra" description="Learn about Rohan Mishra, a software developer, platform engineer, system architect, and designer.">
+  <Header />
+  <main id="main-content">
+    <section class="page-section design-page-intro"><h1>About me</h1><p>A developer who likes useful software and thoughtful interfaces.</p></section>
+    <section class="page-section split-section" aria-labelledby="about-title">
+      <div><h2 id="about-title">A little context</h2><p>I’m Rohan Mishra, a software developer, platform engineer, system architect, and designer. I enjoy turning ambiguous problems into simple, dependable products.</p><p>My work spans application development, platform engineering, infrastructure, system architecture, planning, automation, and interface design. At PockyDoc, I help design and build the healthcare platform for the next generation.</p><p>I’m always happy to talk about product ideas, architecture, engineering, design, music, or the web. <a href="/#contact">Get in touch</a> if you’d like to work together.</p></div>
+      <div><img class="portrait" src="/assets/me.jpg" alt="Rohan Mishra" width="480" height="480" /></div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
